@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+=======
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Тестове завдання
 
-## Available Scripts
+# NONAME DIGITAL
 
-In the project directory, you can run:
+# CRM для пасажирських перевезень
 
-### `npm start`
+Ідея полягає в наступному:
+Вам належить зробити невеличку CRM, для пасажирських перевезень, в якій будуть декілька ролей, такі як: пасажир, водій і менеджер (диспетчер).
+Основні кроки для виконання завдання розписані нище, будь які додаткові функції - будуть плюсом, але якщо вони вписуються в концепцію та логічно завершені.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Дизайн може бути будь-який, на ваш розсуд. Головна вимога - це охайність та довершеність)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Вимоги та інструменти для виконання завдання:
+Використання бібліотеки Bootstrap 4 для React.
+Firebase Authentication.
 
-### `npm test`
+Логіка завершеного завдання має виглядати наступним чином:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Перша сторінка - сторінка реєстрації / авторизації, з підключенням Firebase Authentication (реєстрація через email, google, номер телефону та facebook). Данні записуються в Firestore -> створюється JSON (наприклад: ім’я, вік… на ваш розсуд)
 
-### `npm run build`
+Після авторизації користувач потрапляє на “єкран користувача”.
+Зліва має бути “гамбургер-меню”, в якому мають бути всі сторінки Вашої майбутньої СРМ.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Реєструємо користувача на пошту google (ту пошту, на котру був створений Firebase). Якщо користувач заходить з цього аккаунту, він потрапляє на сторінку адміністратора.
+В гамбургер меню у нього є сторінка “редагування користувачів” (де знаходятся всі користувачі які “зберігаються” в Firestore і редагується JSON). Їм можна виставляти ролі / посади (водій, пасажир, диспетчер).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+І останнім кроком буде створення поїздки,
+в Firestore створюємо колекцію (наприклад trips), і туди створюємо поїздку з JSON (наприклад: номер автомобіля, звідки і куди поїздка, кількість пасажирів…)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> > > > > > > catmika/noname-digital-crm-app/main
