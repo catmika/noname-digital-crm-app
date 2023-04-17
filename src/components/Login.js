@@ -15,7 +15,9 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         navigate("/home");
-        console.log(user);
+        localStorage.setItem("uid", user.uid);
+        localStorage.setItem("name", user.displayName);
+        localStorage.setItem("email", user.email);
       })
       .catch((error) => {
         const errorCode = error.code;
